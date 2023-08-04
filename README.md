@@ -57,15 +57,15 @@ Visual outcomes of the project include:
 
 ## Additional Information <a name="additional-information"></a>
 
-For more information, please take a look at the narrative of our analysis in [our Jupyter notebook](./Malaria%20Detection%20using%20Cell%20Images%20Dataset.ipynb).
+Please review our analysis narrative in [our Jupyter notebook](./spotting-malaria.ipynb) for more information.
 
-For any additional questions, please get in touch with **shaileshettyd@gmail.com**.
+If you have any other questions, please contact **shaileshettyd@gmail.com**.
 
 ## Repository Structure <a name="repository-structure"></a>
 
 ```plaintext
 ├── README.md                                           <- The top-level README for reviewers
-├── Malaria%20Detection%20using%20Cell%20Images%20Dataset.ipynb
+├── spotting-malaria.ipynb
 │                                                       <- Narrative documentation of analysis in Jupyter notebook
 ├── https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria
 │                                                       <- Dataset link
