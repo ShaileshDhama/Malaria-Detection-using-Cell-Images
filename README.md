@@ -1,89 +1,88 @@
-# Malaria Detection using Cell Images
+# Spotting Malaria
 
-This project aims to detect whether an image of a cell contains malaria or not using deep learning techniques. Malaria is a life-threatening disease caused by parasites that are transmitted to people through the bites of infected female Anopheles mosquitoes. It is preventable and curable. In 2017, there were an estimated 219 million cases of malaria in 90 countries. Malaria deaths reached 435,000 in 2017. The WHO African Region carries a disproportionately high share of the global malaria burden. In 2017, the region was home to 92% of malaria cases and 93% of malaria deaths. Malaria is caused by Plasmodium parasites. The parasites are spread to people through the bites of infected female Anopheles mosquitoes, called "malaria vectors." There are 5 parasite species that cause malaria in humans, and 2 of these species – P. falciparum and P. vivax – pose the greatest threat.
+## Table of Contents
 
-## Diagnosis of malaria can be difficult
+- [Overview](#overview)
+- [Diagnosis Challenges](#diagnosis-challenges)
+- [ResNet and Residual Learning](#resnet)
+- [Dataset](#dataset)
+- [Approach](#approach)
+- [Results](#results)
+- [Additional Information](#additional-information)
+- [Repository Structure](#repository-structure)
+- [Citation](#citation)
 
-Where malaria is not endemic anymore (such as in the United States), health-care providers may not be familiar with the disease. Clinicians seeing a malaria patient may forget to consider malaria among the potential diagnoses and not order the needed diagnostic tests. Laboratorians may lack experience with malaria and fail to detect parasites when examining blood smears under the microscope. Malaria is an acute febrile illness. In a non-immune individual, symptoms usually appear 10–15 days after the infective mosquito bite. The first symptoms – fever, headache, and chills – may be mild and difficult to recognize as malaria. If not treated within 24 hours, P. falciparum malaria can progress to severe illness, often leading to death.
+## Overview <a name="overview"></a>
 
-## ResNet and residual learning
+Malaria is a life-threatening disease caused by parasites transmitted to humans through infected female Anopheles mosquitoes. Malaria was responsible for an estimated 219 million cases and 435,000 deaths in 2017 despite being preventable and curable. Early and accurate malaria diagnosis is crucial for rapid and effective disease management and surveillance.
 
-ResNet is a short name for a residual network, but what’s residual learning? Deep convolutional neural networks have achieved the human-level image classification result. Deep networks extract low, middle, and high-level features and classifiers in an end-to-end multi-layer fashion, and the number of stacked layers can enrich the “levels” of features. The stacked layer is of crucial importance, as shown by the ImageNet result.
+In this project, we use deep learning techniques to detect the presence of malaria in cell images, specifically using a Residual Network (ResNet) model.
 
-![ResNet architecture](https://neurohive.io/wp-content/uploads/2019/01/resnet-e1548261477164.png)
+## Diagnosis Challenges <a name="diagnosis-challenges"></a>
 
-## Dataset
+Diagnosis of malaria can be difficult, particularly in areas where malaria is not endemic. Healthcare providers may need to be more familiar with the disease and may fail to order the necessary diagnostic tests. In a non-immune individual, symptoms usually appear 10–15 days after the infective mosquito bite, but the initial symptoms may be mild and difficult to recognize as malaria. If not treated within 24 hours, P. falciparum malaria can progress to severe illness, often leading to death.
 
-The dataset used in this project can be downloaded from Kaggle: https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria
+## ResNet and Residual Learning <a name="resnet"></a>
 
-## Approach
+ResNet, short for residual network, is a type of network designed to overcome the problem of vanishing gradients in deep neural networks by introducing 'skip connections' or 'shortcuts' to allow gradients to flow through the network directly. These networks have been extremely successful and achieved state-of-the-art image classification task performance.
 
-### Data processing & Exploratory Data Analysis
+## Dataset <a name="dataset"></a>
 
-1. Import Libraries
-2. Loading and processing data
-3. Use ResNet34 Pre-trained model
-4. Confusion Matrix
-5. Test our model
-6. Heatmaps
+The dataset used in this project can be downloaded from [Kaggle](https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria).
 
-## Results
+## Approach <a name="approach"></a>
 
-### Sample Labelled Images
+The methodology involves the following steps:
 
-![Sample Labelled Images](./MALARIA_1.png)
+1. Data processing & Exploratory Data Analysis
+2. Import Libraries
+3. Loading and processing data
+4. Use ResNet34 Pre-trained model
+5. Confusion Matrix
+6. Test our model
+7. Heatmaps
 
-### ResNet-34 Model Learning Rate
+## Results <a name="results"></a>
 
-![ResNet-34 Model Learning Rate](./MALARIA_2.png)
+Visual outcomes of the project include:
 
-### Model Learning Outcomes per epoch
+- Sample Labelled Images
+- ResNet-34 Model Learning Rate
+- Model Learning Outcomes per epoch
+- Loss Metrics
+- Classification Interpretation from ResNet34 Learning
+- Confusion Matrix
+- Classification Outcome
+- Heatmaps
 
-![Model Learning Outcomes per epoch](./MALARIA_3.png)
+## Additional Information <a name="additional-information"></a>
 
-### Loss Metrics
+For more information, please take a look at the narrative of our analysis in [our Jupyter notebook](./Malaria%20Detection%20using%20Cell%20Images%20Dataset.ipynb).
 
-![Loss Metrics](./MALARIA_4.png)
+For any additional questions, please get in touch with **shaileshettyd@gmail.com**.
 
-### Classification Interpretation from ResNet34 Learning
+## Repository Structure <a name="repository-structure"></a>
 
-![Classification Interpretation from ResNet34 Learning](./MALARIA_5.png)
-
-### Confusion Matrix
-
-![Confusion Matrix](./MALARIA_6.png)
-
-### Classification Outcome
-
-![Classification Outcome](./MALARIA_7.png)
-
-### Heatmaps
-
-![Heatmaps](./MALARIA_8.png)
-
-## For further information
-
-Please review the narrative of our analysis in [our jupyter notebook](./Malaria%20Detection%20using%20Cell%20Images%20Dataset.ipynb)
-
-For any additional questions, please contact **shaileshettyd@gmail.com)
-
-##### Repository Structure:
-
+```plaintext
+├── README.md                                           <- The top-level README for reviewers
+├── Malaria%20Detection%20using%20Cell%20Images%20Dataset.ipynb
+│                                                       <- Narrative documentation of analysis in Jupyter notebook
+├── https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria
+│                                                       <- Dataset link
+└── images                                              <- Images generated from code
 ```
-├── README.md                                                                                                   <- The top-level README for reviewers
-├── Malaria%20Detection%20using%20Cell%20Images%20Dataset.ipynb                                                 <- Narrative documentation of analysis
-├── https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria                                           <- Dataset
-└── images                                                                                                      <- generated from code
-```
-## Citing :
 
-```
+## Citation <a name="citation"></a>
+
+If you use this project in your work, please cite it as follows:
+
+```bibtex
 @misc{Shailesh:2020,
   Author = {Shailesh Dhama},
-  Title = {Malaria-Detection-using-Cell-Images},
-  Year = {2020},
+  Title = {Spotting Malaria},
+  Year = {2023},
   Publisher = {GitHub},
   Journal = {GitHub repository},
-  Howpublished = {\url{https://github.com/ShaileshDhama/Malaria-Detection-using-Cell-Images}}
+  Howpublished = {\url{https://github.com/ShaileshDhama/Spotting-Malaria}}
 }
 ```
